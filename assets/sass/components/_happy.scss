@@ -1,0 +1,41 @@
+.happy {
+  position: relative;
+
+  padding: 22.8rem 3.4rem 2.7rem;
+  border-radius: 24px;
+  // background-image: url("/images/happy-1.png");
+
+  color: $clr-white;
+  font-weight: 700;
+  text-align: center;
+  z-index: 0;
+
+  @include bgCover;
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(3, 127, 47, 0) 42.19%,
+      #037f2f 100%
+    );
+    /* Primary Drop Shadow */
+    filter: drop-shadow(4px 4px 25px #e6ffc7);
+    border-radius: 24px;
+    pointer-events: none;
+    z-index: -9;
+  }
+  &__text {
+    position: static;
+    z-index: 9;
+    margin-bottom: 2.4rem;
+  }
+  &__name {
+    margin-bottom: 7px;
+  }
+  &__designation {
+    font-weight: normal;
+  }
+}

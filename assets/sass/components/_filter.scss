@@ -1,0 +1,153 @@
+.filter {
+  border-radius: 2.4rem;
+  box-shadow: $primary-shadow;
+  background-color: $clr-white;
+  transition: $tr-normal;
+
+  @include respondMax(767px) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    z-index: 9999;
+    border-radius: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: scroll;
+  }
+
+  .closebtn {
+    @include respondMin(768px) {
+      display: none;
+    }
+  }
+
+  &__header {
+    padding: 1.6rem 0;
+    background-color: $clr-primary;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 2.4rem 2.4rem 0 0;
+    @include respondMax(767px) {
+      border-radius: 0;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 36px;
+    text-align: center;
+    color: $clr-white;
+
+    @include respondMax(767px) {
+      font-size: 18px;
+    }
+  }
+
+  &__inner {
+    padding: 1.6rem 1.6rem 1.6rem 2rem;
+    @include respondMax(767px) {
+      padding: 16px 32px;
+    }
+  }
+
+  &__options {
+    margin-bottom: 1.6rem;
+    &:last-of-type {
+      margin-bottom: 2rem;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 1.6rem;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    color: #333333;
+  }
+  &__control {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+
+    font-size: 16px;
+
+    @include respondMax(991px) {
+      font-size: 14px;
+    }
+
+    @include respondMax(767px) {
+      font-size: 16px;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 1.6rem;
+    }
+    &:hover input ~ .filter__checkmark {
+      background-color: darken($clr-section, 5%);
+    }
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+      &:checked ~ .filter__checkmark {
+        background-color: $clr-white;
+      }
+      &:checked ~ .filter__checkmark:after {
+        display: block;
+        border-color: $clr-primary;
+      }
+    }
+  }
+  &__checkmark {
+    // display: inline-block;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    outline: 1px solid $clr-overlay;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: $clr-white;
+    @include respondMax(991px) {
+      width: 15px;
+      height: 15px;
+    }
+
+    &:after {
+      content: "";
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 6px;
+      height: 12px;
+      border: solid $clr-white;
+      border-width: 0 2px 2px 0;
+      transform: translate(-50%, -60%) rotate(45deg);
+      @include respondMax(991px) {
+        width: 5px;
+        height: 10px;
+      }
+    }
+  }
+}
+
+.qbtn--filter-menu {
+  position: absolute;
+  top: 0;
+  right: calc(2.4rem + 10px);
+  // added container padding
+
+  @include respondMin(768px) {
+    display: none;
+  }
+}

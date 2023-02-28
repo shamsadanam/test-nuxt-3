@@ -1,0 +1,23 @@
+.single-product-details {
+  .sp-gallery {
+    margin-bottom: 2.4rem;
+    border-radius: 2.4rem;
+    overflow: hidden;
+
+    .swiper {
+      padding-bottom: 0;
+    }
+
+    &__img {
+      max-width: 100%;
+      border-radius: 2.4rem;
+    }
+  }
+  .sp-thumb-gallery {
+    &__img {
+      max-width: 100%;
+      border-radius: 2.4rem;
+      cursor: pointer;
+    }
+  }
+}

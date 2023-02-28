@@ -1,0 +1,78 @@
+.sp {
+  &__name {
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 160%;
+  }
+  &__weight {
+    margin-bottom: 8px;
+  }
+  &__sku {
+    margin-bottom: 2.4rem;
+  }
+  &__icons {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 2.4rem;
+  }
+  &__icon {
+    @include flexCenter();
+    border-radius: 6px;
+    padding: 8px;
+    background-color: $clr-primary;
+    transition: $tr-normal;
+    cursor: pointer;
+    &:hover {
+      background-color: darken($clr-primary, 5%);
+    }
+    .icon {
+      width: 3.2rem;
+      height: 3.2rem;
+      fill: $clr-white;
+    }
+    &--fav{
+      .icon{
+        fill: transparent;
+        stroke: $clr-white;
+        stroke-width: 2;
+        transition: $tr-ease-in-out;
+      }
+      &.faved{
+        .icon{
+          fill: $clr-white;
+        }
+      }
+    }
+  }
+  .desc {
+    margin-bottom: 2.4rem;
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    margin-bottom: 2.4rem;
+  }
+  &__price-current {
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 54px;
+    @include respondMax(991px) {
+      font-size: 24px;
+    }
+  }
+  &__price-original {
+    text-decoration: line-through;
+  }
+  .qbtn-container {
+    max-width: 30rem;
+    padding: 0;
+    flex-direction: row;
+    @include respondMax(575px) {
+      max-width: 100%;
+    }
+    .qbtn:hover{
+      color: $clr-white;
+    }
+  }
+}

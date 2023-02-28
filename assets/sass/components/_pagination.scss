@@ -1,0 +1,44 @@
+.pagination-container {
+  padding: 6.8rem 0 0;
+}
+.pagination {
+  gap: 1.6rem;
+  li {
+    a {
+      font-size: 2.4rem;
+      width: 5.6rem;
+      height: 5.6rem;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: $tr-normal;
+      @include flexCenter;
+      color: $clr-white;
+
+      &:hover {
+        color: $clr-white;
+      }
+    }
+  }
+  &__arrow {
+    background-color: $clr-primary;
+    &:hover {
+      background-color: darken($clr-primary, 5%);
+    }
+  }
+  &__number {
+    background-color: $clr-tartiary;
+    font-weight: 700;
+
+    &:hover {
+      background-color: darken($clr-tartiary, 5%);
+    }
+
+    &--active {
+      background-color: $clr-secondary;
+
+      &:hover {
+        background-color: darken($clr-secondary, 5%);
+      }
+    }
+  }
+}

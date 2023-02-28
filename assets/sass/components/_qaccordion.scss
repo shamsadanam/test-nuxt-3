@@ -1,0 +1,45 @@
+.qaccordion {
+  font-size: inherit;
+
+  .accordion-item {
+    border: none;
+    border-radius: 2.4rem;
+
+    &:not(:last-of-type) {
+      margin-bottom: 1.6rem;
+    }
+  }
+  .accordion-header {
+    .accordion-button {
+      display: flex;
+      align-items: center;
+      padding: 2.4rem 3.6rem;
+      border-radius: 2.4rem;
+      border: none;
+
+      &:last-of-type {
+        border-bottom-right-radius: 2.4rem;
+        border-bottom-left-radius: 2.4rem;
+      }
+
+      &:focus {
+        box-shadow: none;
+      }
+      &:not(.collapsed) {
+        // color: $clr-primary;
+        color: inherit;
+        background-color: $clr-white;
+        box-shadow: none;
+      }
+      &::after {
+        width: 2.4rem;
+        height: 2.4rem;
+        background-size: 2.4rem;
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 9.72769L13.4447 4L15 5.63615L8 13L1 5.63615L2.55531 4L8 9.72769Z' fill='%238BC53F'/%3E%3C/svg%3E%0A");
+      }
+    }
+  }
+  .accordion-body {
+    padding: 2.4rem 3.6rem;
+  }
+}

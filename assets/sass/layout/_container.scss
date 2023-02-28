@@ -1,0 +1,41 @@
+section,
+.section {
+  padding-bottom: 7.2rem;
+  background-color: $clr-section;
+
+  @include respondMax(1100px) {
+    padding-bottom: calc(7.2rem + 20px);
+  }
+
+  &.category-section {
+    padding: 5.6rem 0 7.8rem;
+    background-color: $clr-white;
+  }
+
+  &.products-section {
+    padding-top: 7.2rem;
+  }
+
+  &:first-of-type {
+    padding: 5.6rem 0;
+  }
+
+  .swiper {
+    @include respondMax(1100px) {
+      padding-bottom: 20px;
+    }
+  }
+}
+.container {
+  @include respondBetween(992px, 1440px) {
+    max-width: 980px;
+  }
+  padding: 0 calc(2.4rem + 10px); //16px from swiper styles
+
+  &--slider {
+    position: relative;
+    @include respondMax(575px) {
+      padding: 0 2.4rem;
+    }
+  }
+}

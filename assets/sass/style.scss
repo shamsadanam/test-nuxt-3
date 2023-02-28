@@ -1,0 +1,57 @@
+// @import "../node_modules/bootstrap/scss/bootstrap";
+
+// @import 'swiper/scss/bundle';
+
+// @import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/base";
+// @import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/buttons";
+// @import "components/hero";
+@import "components/category";
+@import "components/cat-card";
+// @import "components/slider";
+@import "components/product";
+@import "components/download";
+@import "components/about";
+@import "components/happy";
+@import "components/recipe";
+@import "components/why";
+@import "components/sidenav";
+@import "components/modal";
+@import "components/filter";
+@import "components/pagination";
+@import "components/sp";
+@import "components/qtab";
+@import "components/review";
+@import "components/qform";
+@import "components/qradio";
+@import "components/qcard";
+@import "components/qicard";
+@import "components/user";
+@import "components/user-menu";
+@import "components/qtable";
+@import "components/user-avatar";
+@import "components/qaccordion";
+@import "components/blog-featured";
+@import "components/overlay";
+@import "components/blog";
+@import "components/blog-content";
+@import "components/copybox";
+// @import "components/upload-img-square";
+// @import "components/uploaded-img-container";
+@import "components/cart";
+
+@import "pages/home";
+@import "pages/single-product"; 
+@import "layout/container";
+@import "layout/header"; 
+@import "layout/footer"; 
+
+// @import  "vendors/";
+// @import "themes";

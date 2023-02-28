@@ -1,0 +1,86 @@
+#review {
+  padding-left: 0;
+  padding-right: 0;
+}
+.review {
+  display: flex;
+  gap: 8px;
+  padding: 0 3.2rem;
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid rgba($clr-black, 15%);
+    padding-bottom: 8px;
+    margin-bottom: 2.4rem;
+  }
+
+  @include respondMax(575px) {
+    flex-direction: column;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  &__avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    @include respondMax(575px) {
+      font-size: 12px;
+    }
+    img {
+      width: 20px;
+      height: 20px;
+      object-fit: cover;
+    }
+  }
+  .desc {
+    margin-bottom: 1.6rem;
+  }
+  &__img-container {
+    margin-bottom: 12px;
+    display: flex;
+    gap: 2.4rem;
+    img {
+      width: 12rem;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      cursor: pointer;
+      @include respondMax(767px) {
+        max-width: 15rem;
+      }
+      @include respondMax(575px) {
+        max-width: 10rem;
+      }
+    }
+  }
+  &__like {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    @include respondMax(575px) {
+      font-size: 12px;
+    }
+    .icon {
+      width: 16px;
+      height: 16px;
+      fill: $clr-tartiary;
+    }
+  }
+  &__date {
+    font-size: 14px;
+    @include respondMax(575px) {
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.modal {
+  font-size: 1.6rem;
+  .modal-dialog {
+    @include respondMax(575px) {
+      max-width: 80%;
+      margin: 0 auto;
+    }
+  }
+
+  .modal-header {
+    border: none;
+  }
+  .modal-body {
+    height: auto;
+    @include flexCenter();
+    position: relative;
+    padding: 0;
+
+    .btn-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(calc(100% + 5px), calc(-100% - 5px));
+      background-color: #fff;
+      @include respondMax(575px) {
+        transform: translate(0%, calc(-100% - 10px));
+      }
+    }
+  }
+  &--confirm{
+    .modal-dialog{
+      height: 70vh;
+      @include gridCenter();
+    }
+
+    .qbtn{
+      padding: .8rem 1.6rem;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.about {
+  .row {
+    border-radius: 24px;
+    background-color: $clr-white;
+  }
+
+  &__text {
+    padding-left: 4.3rem;
+    @include respondMax(991px) {
+      padding: 3rem 0 3rem 4.3rem;
+    }
+  }
+}

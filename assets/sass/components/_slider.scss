@@ -1,0 +1,119 @@
+//same height for all slides
+.swiper-slide {
+  height: auto;
+}
+
+.swiper-pagination-bullet {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: $clr-white;
+  opacity: 1;
+  transition: width 0.2s ease-in-out;
+  border-radius: 50%;
+}
+.swiper-pagination-bullet-active {
+  background-color: $clr-tartiary;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 5.6rem;
+  height: 5.6rem;
+  background-color: rgba($clr-primary, 0.8);
+  border-radius: 50%;
+  color: $clr-white;
+
+  &:hover {
+    background: darken($clr-primary, 5%);
+  }
+  &:after {
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
+// .swiper-button-prev {
+//   // left: var(--arrow-pos);
+// }
+// .swiper-button-next {
+//   // right: var(--arrow-pos);
+// }
+
+.container--slider {
+  .swiper-button-next,
+  .swiper-button-prev {
+    --arrow-pos-x: 100%;
+    --arrow-pos-y: 0;
+    position: absolute;
+    top: 50%;
+    z-index: 99;
+    color: $clr-primary;
+    color: $clr-white;
+
+    @include respondMax(1100px) {
+      top: 100%;
+      --arrow-pos-x: 100%;
+      --arrow-pos-y: 50%;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 0;
+    transform: translate(calc(-1 * var(--arrow-pos-x)), var(--arrow-pos-y));
+
+    @include respondMax(1100px) {
+      left: calc(50% - 5px);
+    }
+  }
+  .swiper-button-next {
+    right: 0;
+    transform: translate(var(--arrow-pos-x), var(--arrow-pos-y));
+    @include respondMax(1100px) {
+      right: calc(50% - 5px);
+    }
+  }
+}
+
+// #happySlider {
+//   // position: relative;
+
+//   .swiper-button-next {
+//     // right: 0;
+//   }
+//   .swiper-button-prev {
+//     // left: 0;
+//   }
+//   .swiper-button-next,
+//   .swiper-button-prev {
+//     // background-color: $clr-white;
+//     // color: $clr-primary;
+//     // top: 50%;
+//     // z-index: 99;
+//     // transform: translate(0, 0);
+//   }
+// }
+
+#recipeSlider {
+  position: relative;
+  .swiper {
+    // display: grid;
+    // place-items: center;
+  }
+  .swiper-wrapper {
+    // margin: 0 auto;
+    // justify-content: center;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 4.5rem;
+    height: 4.5rem;
+    &:after {
+      font-size: 10px;
+    }
+  }
+  .swiper-button-next {
+    transform: translateX(70%) translateY(-10px);
+  }
+  .swiper-button-prev {
+    transform: translateX(-70%) translateY(-10px);
+  }
+}

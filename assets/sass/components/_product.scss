@@ -1,0 +1,130 @@
+.product {
+  position: relative;
+  padding-bottom: 2rem;
+  border-radius: 2.4rem;
+  overflow: hidden;
+
+  box-shadow: $primary-shadow;
+
+  background-color: $clr-white;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%; // same height inside .row > .col
+
+  &__img {
+    width: 100%;
+    height: 24rem;
+    object-fit: cover;
+    margin-bottom: 8px;
+  }
+
+  &__info {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    color: $clr-product;
+    margin-top: auto;
+  }
+
+  &__name {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    // line-height: 33px;
+    letter-spacing: 0em;
+    @include maxLines(1);
+    @include respondMax(991px) {
+      font-size: 14px;
+    }
+    @include respondMax(575px) {
+      @include maxLines(2);
+    }
+    &--subscribe {
+      @include respondMax(1366px) {
+        font-size: 16px;
+      }
+    }
+  }
+  &__weight {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.9rem;
+    letter-spacing: 0em;
+    margin-bottom: 4px;
+    margin-top: auto;
+    @include respondMax(991px) {
+      font-size: 12px;
+    }
+  }
+  &__price {
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    margin-bottom: 1.4rem;
+    @include respondMax(991px) {
+      font-size: 12px;
+    }
+  }
+  &__price-original {
+    margin-left: 8px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-decoration: line-through;
+    @include respondMax(991px) {
+      font-size: 12px;
+    }
+  }
+  &__offer {
+    position: absolute;
+    top: 23px;
+    width: 7.2rem;
+    height: 3.2rem;
+    @include flexCenter;
+    border-radius: 0 1.2rem 1.2rem 0;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 0;
+    color: $clr-white;
+    background-color: $clr-primary;
+    &--save{
+      width: 12rem;
+      height: 3rem;
+      font-size: 1.6rem;
+    }
+  }
+  &__fav {
+    @include flexCenter;
+    position: absolute;
+    top: 23px;
+    right: 13px;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: $clr-white;
+    cursor: pointer;
+    transition: $tr-normal;
+
+    .icon {
+      width: 2.4rem;
+      height: 2.4rem;
+      stroke: $clr-orange;
+      stroke-width: 2;
+      fill: #fff;
+      transition: $tr-ease-in-out;
+    }
+    &.faved .icon {
+      fill: $clr-orange;
+    }
+  }
+  .qbtn-container {
+    padding: 0 10px;
+    // margin-top: auto;
+  }
+  &--primary {
+    background-color: $clr-primary;
+    .product__info {
+      color: $clr-white;
+    }
+  }
+}

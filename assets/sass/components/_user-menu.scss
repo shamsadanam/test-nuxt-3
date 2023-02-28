@@ -1,0 +1,29 @@
+.user-menu {
+  padding: 1.6rem 2.4rem;
+  background-color: $clr-white;
+
+  @include respondMax(991px) {
+    display: flex;
+    justify-content: space-between;
+
+    overflow-x: scroll;
+  }
+
+  li {
+    border-bottom: 1px solid #f3f3f3;
+
+    padding: 8px 0 12px;
+
+    &:last-of-type {
+      padding-bottom: 0px;
+      border-bottom: none;
+    }
+    &.active {
+      color: $clr-primary;
+    }
+
+    @include respondMax(767px) {
+      padding: 8px;
+    }
+  }
+}

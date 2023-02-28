@@ -1,0 +1,196 @@
+.qform {
+  border-radius: 2.4rem;
+  background-color: $clr-white;
+  // border: 1px solid red;
+  padding: 0;
+
+  &--green {
+    background-color: $clr-section;
+    padding: 2.4rem;
+  }
+
+  &--blog-search {
+    position: relative;
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      z-index: 99;
+    }
+    .form-control {
+      padding-left: 5rem;
+    }
+  }
+
+  &--review {
+    padding: 2.4rem 3.2rem;
+    border-radius: 0;
+    border-top: 1px solid rgba($clr-black, 0.3);
+  }
+  .nav-link {
+    color: $clr-product;
+  }
+  & > .nav {
+    justify-content: center;
+    .nav-item {
+      flex: 1 1 0px;
+      &:first-of-type {
+        .nav-link {
+          border-top-left-radius: 2.4rem;
+        }
+      }
+      &:last-of-type {
+        .nav-link {
+          border-top-right-radius: 2.4rem;
+        }
+      }
+      .nav-link {
+        width: 100%;
+        border: none;
+        padding: 1.2rem 0;
+        font-weight: 700;
+        font-size: 2.4rem;
+        line-height: 3.6rem;
+        &:hover {
+          background-color: darken($clr-white, 2%);
+        }
+        &.active {
+          border-color: $clr-primary;
+          background-color: $clr-primary;
+          color: $clr-white;
+        }
+      }
+    }
+  }
+  & > .tab-content {
+    padding: 5.6rem 1rem;
+    .tab-pane{
+      width: 95%;
+      margin: 0 auto;
+    }
+  }
+  .tab-content {
+    @include flexCenter;
+    .qradio-container {
+      display: flex;
+      justify-content: space-around;
+      gap: 1.2rem;
+      margin-bottom: 2.4rem;
+
+      .nav-link {
+        padding: 0;
+        font-weight: 700;
+        font-size: 1.8rem;
+        @include respondMax(991px) {
+          font-size: 14px;
+        }
+        @include respondMax(575px) {
+          font-size: 12px;
+        }
+      }
+    }
+    &--inner {
+      .tab-pane {
+        width: 100%;
+      }
+    }
+    .error-msg{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  // width: 100%;
+  font-size: 1.6rem;
+  @include respondMax(575px) {
+    font-size: 12px;
+  }
+  input {
+    font-size: inherit;
+    padding: 1.2rem 1.6rem;
+    border-radius: 8px;
+    border: none;
+    @include respondMax(991px) {
+      padding: 1.6rem;
+    }
+    @include respondMax(575px) {
+      font-size: 12px;
+      &::placeholder {
+        font-size: 10px;
+      }
+    }
+  }
+  .form-control,
+  .form-select {
+    &:focus {
+      box-shadow: none;
+      outline: none;
+      .input-group-text {
+        border: none;
+      }
+    }
+  }
+  .input-group {
+    margin-bottom: 2.4rem;
+    border: 1px solid $clr-tartiary;
+    border-radius: 12px;
+    outline: none;
+
+    overflow: hidden;
+    .input-group-text {
+      padding: 1.2rem 2.6rem;
+      border: none;
+      font-size: inherit;
+      background-color: $clr-tartiary;
+      color: $clr-white;
+      font-weight: 700;
+      transition: $tr-normal;
+      &:hover {
+        background-color: darken($clr-tartiary, 5%);
+      }
+      &--disabled{
+        background-color: $clr-disabled;
+      }
+    }
+  }
+
+  input.is-valid {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath d='M9.5501 18L3.8501 12.3L5.2751 10.875L9.5501 15.15L18.7251 5.975L20.1501 7.4L9.5501 18Z' fill='%23037F2F'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 1.2rem) calc(0.75em + 1.2rem);
+  }
+  .no-arrows::-webkit-outer-spin-button,
+  .no-arrows::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: none;
+    margin: 0;
+  }
+  .form-select {
+    cursor: pointer;
+    padding: 1.2rem 1.6rem;
+    border-radius: 12px;
+    border: 1px solid $clr-tartiary;
+    font-size: 1.6rem;
+    @include respondMax(575px) {
+      font-size: 12px;
+    }
+  }
+  textarea {
+    padding: 1.6rem;
+    border: none;
+    resize: none;
+    height: 10rem;
+  }
+  .addressLabelInput{
+    display: none;
+  }
+  .addressLabelInput:checked + .qbtn{
+    background-color: $clr-tartiary;
+    color: $clr-white;
+  }
+}

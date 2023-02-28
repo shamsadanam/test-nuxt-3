@@ -1,0 +1,25 @@
+$clr-primary: #037f2f;
+$clr-secondary: #0db04b;
+$clr-tartiary: #8dc63f;
+$clr-lightgreen: hsl(85, 54%, 70%);
+$clr-overlay: #333333;
+$clr-text: #0b253b;
+$clr-orange: #ffa51e;
+$clr-red: #e02c2c;
+
+$clr-black: #000;
+
+$clr-white: #fff;
+$clr-disabled: #c2c2c2;
+
+$clr-section: #f6faf1;
+
+$clr-product: #333333;
+
+$bezier-normal: cubic-bezier(0.57, 0.21, 0.69, 1.25);
+$tr-normal: all 0.2s $bezier-normal;
+$tr-ease-in-out: all .2s ease-in-out;
+
+$primary-shadow: 4px 4px 25px #e6ffc7;
+$primary-shadow-top: 2px -2px 2px #e6ffc7;
+$primary-gradient: linear-gradient(90deg, #0db04b 0%, #8bc53f 100%);

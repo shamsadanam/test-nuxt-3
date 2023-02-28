@@ -1,0 +1,30 @@
+.blog-featured {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include bgCover();
+
+  h3 {
+    margin-top: auto;
+  }
+  .qbtn {
+    margin-top: auto;
+    margin-bottom: 2.4rem;
+  }
+
+  @include respondMax(767px) {
+    padding: 1rem;
+    justify-content: space-between;
+    // flex-direction: row;
+    h3 {
+      margin-bottom: 2.4rem;
+    }
+    .qbtn {
+      margin-bottom: 0;
+      padding: 1rem;
+    }
+  }
+}

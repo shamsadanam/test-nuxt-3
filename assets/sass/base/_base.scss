@@ -1,0 +1,49 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  // @include respondMin(1920px) {
+  //   font-size: 62.5%;
+  // }
+
+  @include respondMax(1440px) {
+    font-size: 55%; //8px
+  }
+
+  @include respondMax(991px) {
+    font-size: 45%; //7.2px
+  }
+  // @include respondMax(767px) {
+  //   font-size: 55%;
+  // }
+
+  @include respondMax(575px) {
+    font-size: 40%; //6.4px
+  }
+  @include respondMax(360px) {
+    font-size: 35%; //5.6px
+  }
+}
+
+body {
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  color: $clr-white;
+  background-color: $clr-primary;
+}

@@ -1,0 +1,144 @@
+.link-underline {
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    transition: $tr-normal;
+  }
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-1 {
+  flex: 1 1 0px;
+}
+
+.flex-45 {
+  flex: 1 1 45%;
+}
+
+.bg-section {
+  background-color: $clr-section;
+}
+
+.br {
+  &-24 {
+    border-radius: 2.4rem;
+  }
+  &-16 {
+    border-radius: 1.6rem;
+  }
+  &-12 {
+    border-radius: 1.2rem;
+  }
+}
+
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mb-16 {
+  margin-bottom: 1.6rem;
+}
+
+.mb-2rem {
+  margin-bottom: 2rem;
+}
+
+.mb-24 {
+  margin-bottom: 2.4rem;
+}
+
+.mb-32 {
+  margin-bottom: 3.2rem;
+}
+
+.p-8 {
+  padding: 8px;
+}
+
+.py-24{
+  padding: 2.4rem 0;
+}
+
+.p-16 {
+  padding: 1.6rem;
+}
+
+.p-8\/16 {
+  padding: 8px 1.6rem;
+}
+
+// .p-24 {
+//   padding: 2.4rem;
+// }
+
+.p-32 {
+  padding: 3.2rem;
+}
+
+.pb-16 {
+  padding-bottom: 1.6rem;
+}
+
+.px-32 {
+  padding: 0 3.2rem;
+}
+
+.p-24\/32 {
+  padding: 2.4rem 3.2rem;
+}
+
+.gap-8 {
+  gap: 8px;
+}
+
+.gap-16 {
+  gap: 1.6rem;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
+.primary-shadow {
+  box-shadow: $primary-shadow;
+}
+
+.primary-shadow-top {
+  box-shadow: $primary-shadow-top;
+}
+
+.max-lines-3 {
+  @include maxLines(3);
+}
+
+.b-red {
+  border: 1px solid red;
+}
+
+.show-ws {
+  white-space: pre-wrap; /* or pre-line */
+}

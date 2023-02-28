@@ -1,0 +1,82 @@
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  background-color: $clr-white;
+  box-shadow: $primary-shadow;
+  overflow-x: hidden;
+  transition: $tr-normal;
+
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+
+  @include respondMin(768px) {
+    display: none;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $clr-primary;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 36px;
+    text-align: center;
+    padding: 1.6rem 0;
+    color: $clr-white;
+    text-align: center;
+  }
+
+  &__menu {
+    padding: 16px 0;
+    a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 16px;
+      color: $clr-overlay;
+      display: block;
+      transition: 0.3s;
+      &:hover {
+        color: $clr-overlay;
+      }
+    }
+  }
+  .closebtn {
+    top: 15px;
+    right: 25px;
+  }
+
+  &__call {
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    // padding: 8px 8px 8px 32px;
+
+    font-size: 15px;
+    color: $clr-overlay;
+    &:hover {
+      color: $clr-overlay;
+    }
+    svg {
+      fill: $clr-primary;
+      margin-right: 8px;
+    }
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}

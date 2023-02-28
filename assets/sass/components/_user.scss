@@ -1,0 +1,28 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.4rem 1.6rem 2rem;
+  background-color: $clr-white;
+  text-align: center;
+
+  &__img {
+    max-width: 12rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  h3 {
+    margin-bottom: 4px;
+  }
+  &__badge {
+    max-width: 2.4rem;
+  }
+  .progress {
+    height: 8px;
+    border-radius: 2.4rem;
+    .progress-bar {
+      background-color: $clr-primary;
+    }
+  }
+}

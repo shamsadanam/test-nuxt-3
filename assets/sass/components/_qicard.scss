@@ -1,0 +1,114 @@
+.qicard {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  padding: 1.6rem;
+  border-radius: 1.2rem;
+  background-color: $clr-section;
+
+  &--cat {
+    border: 1px solid $clr-tartiary;
+    background-color: $clr-white;
+    border-radius: 2.4rem;
+  }
+
+  &--review {
+    padding: 0;
+    gap: 2.4rem;
+    background-color: $clr-white;
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 1.6rem;
+  }
+
+  @include respondMax(575px) {
+    gap: 8px;
+  }
+  &__img {
+    max-width: 8.8rem;
+    aspect-ratio: 1/1;
+    border-radius: 1.6rem;
+    object-fit: cover;
+    &--rounded {
+      border-radius: 50%;
+    }
+  }
+  &__title {
+    font-size: 18px;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin-bottom: 12px;
+
+    @include maxLines(2);
+
+    @include respondMax(1366px) {
+      font-size: 14px;
+    }
+
+    @include respondMax(767px) {
+      margin-bottom: 0;
+    }
+
+    @include respondMax(575px) {
+      font-size: 12px;
+    }
+
+    &--review {
+      font-weight: normal;
+    }
+  }
+
+  &__meta-container{
+    width: 50%;
+  }
+
+  &__meta {
+    font-size: 13px;
+    line-height: 1em;
+
+    & > *:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    @include respondMax(767px) {
+      display: none;
+    }
+  }
+
+  .qbtn-container {
+    flex: 0 0 10rem;
+    margin-left: auto;
+
+    @include respondMax(991px) {
+      flex: 0 0 85px;
+    }
+    @include respondMax(575px) {
+      flex: 0 0 75px;
+    }
+    .qbtn {
+      width: 100%;
+      padding: 1.2rem;
+      @include respondMax(575px) {
+        padding: 5px;
+      }
+    }
+  }
+
+  &__cost {
+    width: 25%;
+    font-size: 18px;
+    text-align: right;
+    @include respondMax(1366px) {
+      font-size: 16px;
+    }
+    @include respondMax(575px) {
+      font-size: 12px;
+    }
+  }
+  &--text-block {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,26 @@
+// .cart {
+//   max-height: 360px;
+//   overflow-y: scroll;
+//   // border: 1px solid red;
+//   /* width */
+//   &::-webkit-scrollbar {
+//     width: 5px;
+//   }
+
+//   /* Track */
+//   &::-webkit-scrollbar-track {
+//     // box-shadow: inset 0 0 5px tr;
+//     border-radius: 10px;
+//   }
+
+//   /* Handle */
+//   &::-webkit-scrollbar-thumb {
+//     background: $clr-tartiary;
+//     border-radius: 10px;
+//   }
+
+//   /* Handle on hover */
+//   &::-webkit-scrollbar-thumb:hover {
+//     background: darken($clr-tartiary, 5%);
+//   }
+// }

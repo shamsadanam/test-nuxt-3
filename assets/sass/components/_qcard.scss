@@ -1,0 +1,43 @@
+.qcard {
+  border-radius: 2.4rem;
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    padding: 1.2rem 2.4rem;
+    background: $primary-gradient;
+    color: $clr-white;
+
+    .icon {
+      width: 3.2rem;
+      height: 3.2rem;
+      fill: $clr-white;
+    }
+    &--center {
+      justify-content: center;
+      position: relative;
+
+      .icon {
+        position: absolute;
+        right: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+    }
+  }
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 3.6rem;
+  }
+  &__inner {
+    padding: 1.6rem;
+    background-color: $clr-white;
+    &--large {
+      padding: 2.4rem 5rem;
+    }
+  }
+}

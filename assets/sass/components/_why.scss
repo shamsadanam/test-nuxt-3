@@ -1,0 +1,50 @@
+.why {
+  min-height: 32rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 2.4rem;
+  padding: 2.3rem 2rem 3.2rem;
+
+  text-align: center;
+  background-color: $clr-white;
+  box-shadow: $primary-shadow;
+
+  @include respondMax(991px) {
+    // aspect-ratio: 1/1;
+    min-height: 40rem;
+  }
+
+  @include respondMax(575px) {
+    aspect-ratio: 1/1;
+    min-height: 25rem;
+  }
+
+  &__img {
+    margin-bottom: 2.5rem;
+    max-width: 100%;
+    @include respondMax(575px) {
+      margin-bottom: 2rem;
+      max-width: 60%;
+    }
+  }
+  &__title {
+    margin-bottom: 1.3rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.7rem;
+
+    @include respondMax(991px) {
+      font-size: 16px;
+    }
+    @include respondMax(575px) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+  .desc {
+    @include respondMax(575px) {
+      display: none;
+    }
+  }
+}

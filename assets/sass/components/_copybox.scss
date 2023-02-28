@@ -1,0 +1,14 @@
+
+.copybox {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  background-color: hsl(85, 53%, 75%);
+  border-radius: 1.2rem;
+  &__btn{
+    cursor: pointer;
+    svg{
+      fill: currentColor;
+    }
+  }
+}

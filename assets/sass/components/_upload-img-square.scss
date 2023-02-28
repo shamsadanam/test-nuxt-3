@@ -1,0 +1,45 @@
+.upload-img-square {
+  width: 11.5rem;
+  height: 11.5rem;
+  padding: 1.8rem;
+  border-radius: 1.6rem;
+  border: 1px solid $clr-disabled;
+  text-align: center;
+  color: $clr-disabled;
+  cursor: pointer;
+
+  @include respondMax(991px) {
+    line-height: 1.6em;
+  }
+
+  @include respondMax(575px) {
+    line-height: 1.2em;
+    width: 8.5rem;
+    height: 8.5rem;
+
+    @include flexCenter();
+  }
+
+  svg {
+    fill: $clr-disabled;
+    width: 2.4rem;
+    height: 2.4rem;
+
+    @include respondMax(575px) {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    cursor: no-drop;
+    pointer-events: none;
+  }
+
+  span {
+    @include respondMax(575px) {
+      display: none;
+    }
+  }
+}
