@@ -5,20 +5,23 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "jsonserver": "json-server --watch db.json --port 3344",
+    "start": "npm-run-all --parallel dev jsonserver"
   },
   "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
     "@sidebase/nuxt-pdf": "^0.1.1",
     "nuxt": "^3.1.0",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0"
   },
   "dependencies": {
-    "@pinia/nuxt": "^0.4.6",
+    "@pinia/nuxt": "^0.4.7",
     "bootstrap": "^5.0.2",
     "luxon": "^3.2.1",
     "nuxt-swiper": "^1.0.1",
-    "pinia": "^2.0.30",
+    "pinia": "^2.0.33",
     "sslcommerz-lts": "^1.1.0",
     "sweetalert2": "^11.7.2",
     "uuid": "^9.0.0",

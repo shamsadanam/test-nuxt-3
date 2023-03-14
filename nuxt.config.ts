@@ -31,13 +31,13 @@ export default defineNuxtConfig({
 },
   modules: [["nuxt-swiper", {
     styleLang: 'css',
-  }]],
+  }], "@pinia/nuxt"],
   css: ["~/assets/sass/style.scss"],
-  // runtimeConfig: {
-  //   currencyKey: process.env.CURRENCY_API_KEY,
-  //   public: {
-  //     apiUrl:
-  //       process.env.API_URL || "https://dev.appinionbd.com/qfl-ecom-admin/api",
-  //   },
-  // },
+  runtimeConfig: {
+    // apiUrl: process.env.API_URL || "http://localhost:3344",
+    public: {
+      apiUrl:
+        process.env.API_URL || "https://dev.appinionbd.com/qfl-ecom-admin/api",
+    },
+  },
 });
