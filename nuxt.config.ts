@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   ssr: true,
   app: {
-    head: {
+    head: { 
       title: "Test Nuxt 3",
       meta: [
         {
@@ -29,7 +29,9 @@ export default defineNuxtConfig({
         },
     },
 },
-  modules: ["nuxt-swiper"],
+  modules: [["nuxt-swiper", {
+    styleLang: 'css',
+  }]],
   css: ["~/assets/sass/style.scss"],
   // runtimeConfig: {
   //   currencyKey: process.env.CURRENCY_API_KEY,
