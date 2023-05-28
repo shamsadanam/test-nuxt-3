@@ -79,7 +79,7 @@
   padding: 8px;
 }
 
-.py-24{
+.py-24 {
   padding: 2.4rem 0;
 }
 
@@ -141,4 +141,8 @@
 
 .show-ws {
   white-space: pre-wrap; /* or pre-line */
+}
+
+.object-fit-cover {
+  object-fit: cover;
 }

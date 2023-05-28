@@ -1,16 +1,21 @@
 <template>
   <header>
-    <ul>
+    <ul class="d-flex gap-3 justify-content-center mb-5 mt-3">
       <li>
         <NuxtLink to="/">Home</NuxtLink>
+      </li>
+      <li>
         <NuxtLink to="/about">About</NuxtLink>
+      </li>
+      <li>
+        <NuxtLink to="/scroll">Scroll</NuxtLink>
       </li>
     </ul>
   </header>
 
-  <div>
+  <main>
     <slot />
-  </div>
+  </main>
 </template>
 
 <script setup></script>

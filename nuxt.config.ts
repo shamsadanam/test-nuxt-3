@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   ssr: true,
   app: {
-    head: { 
+    head: {
       title: "Test Nuxt 3",
       meta: [
         {
@@ -12,7 +12,7 @@ export default defineNuxtConfig({
       ],
       link: [
         {
-          rel: "stylesheet", 
+          rel: "stylesheet",
           href: "/css/bootstrap.min.css",
         },
       ],
@@ -22,17 +22,29 @@ export default defineNuxtConfig({
   },
   vite: {
     css: {
-        preprocessorOptions: {
-            scss: {
-                additionalData: '@import "@/assets/sass/global.scss";',
-            },
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@import "@/assets/sass/global.scss";',
         },
+      },
     },
-},
+  },
   modules: [["nuxt-swiper", {
     styleLang: 'css',
-  }], "@pinia/nuxt"],
+  }], "@pinia/nuxt", '@vueuse/motion/nuxt'],
+
   css: ["~/assets/sass/style.scss"],
+  motion: {
+    directives: {
+      'pupUP': {
+        initial: {
+          scale: 0,
+          opacity: 0,
+          y: 100,
+        }
+      }
+    }
+    },
   runtimeConfig: {
     // apiUrl: process.env.API_URL || "http://localhost:3344",
     public: {
