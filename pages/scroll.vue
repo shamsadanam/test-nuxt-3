@@ -76,40 +76,10 @@ onMounted(() => {
 
     <div class="row">
       <div class="section p-5 mb-5" ref="section">
-        <h1 class="text-center">Section 1</h1>
-        <client-only>
-          <p>{{ getRandomColor() }}</p>
-        </client-only>
+        <h1 class="text-center">Section 2</h1>
       </div>
       <div class="section p-5 mb-5" ref="section">
         <h1 class="text-center">Section 2</h1>
-        <client-only>
-          <p>{{ getRandomColor() }}</p>
-        </client-only>
-      </div>
-      <div class="section p-5 mb-5" ref="section">
-        <h1 class="text-center">Section 3</h1>
-        <client-only>
-          <p>{{ getRandomColor() }}</p>
-        </client-only>
-      </div>
-      <div class="section p-5 mb-5" ref="section">
-        <h1 class="text-center">Section 4</h1>
-        <client-only>
-          <p>{{ getRandomColor() }}</p>
-        </client-only>
-      </div>
-      <div class="section p-5 mb-5" ref="section">
-        <h1 class="text-center">Section 5</h1>
-        <client-only>
-          <p>{{ getRandomColor() }}</p>
-        </client-only>
-      </div>
-      <div class="section p-5 mb-5" ref="section">
-        <h1 class="text-center">Section 6</h1>
-        <client-only>
-          <p>{{ getRandomColor() }}</p>
-        </client-only>
       </div>
     </div>
   </div>
