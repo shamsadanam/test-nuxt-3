@@ -10,7 +10,7 @@
     "start": "npm-run-all --parallel dev jsonserver"
   },
   "devDependencies": {
-    "@faker-js/faker": "^7.6.0",
+    "@faker-js/faker": "^8.0.2",
     "@sidebase/nuxt-pdf": "^0.1.1",
     "nuxt": "^3.5.1",
     "sass": "^1.57.1",
@@ -18,7 +18,9 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.7",
+    "@vueuse/core": "^10.1.2",
     "@vueuse/motion": "^2.0.0",
+    "animate.css": "^4.1.1",
     "bootstrap": "^5.0.2",
     "luxon": "^3.2.1",
     "nuxt-swiper": "^1.0.1",

@@ -4,13 +4,7 @@
   </NuxtLayout>
 </template>
 
-<script setup>
-
-
-</script>
-
-
-
+<script setup></script>
 
 <style>
 /* @import "swiper/css/bundle"; */
